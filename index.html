@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tính lãi xuất ngân hàng</title>
+</head>
+<body>
+    <h3><p>Tính lãi xuất ngân hàng</p></h3>
+    <p>Nhập số vốn</p>
+    <br>
+    <input type="number" id="money"> <p>VNĐ</p>
+    <br>
+    <p>Nhập lãi xuất</p>
+    <br>
+    <input type="number" id="per"><p>%</p>
+    <br>
+    <p>Nhập số năm</p>
+    <br>
+    <input type="number" id="year"><p>Năm</p>
+    <p><b>Kết quả</b></p>
+    <input type="number" id="result" value="result">
+    <button onclick="lai_xuat()">Tính toán</button>
+    <button onclick="">Reset</button>
+</body>
+</html>
+<script>
+    function lai_xuat(){
+        let money = document.getElementById("money").value;
+        let per = document.getElementById("per").value;
+        let year = document.getElementById("year").value;
+        let result = money * (1 + year * per/100) ;
+
+        document.getElementById("result").value = result;
+    }
+</script>
